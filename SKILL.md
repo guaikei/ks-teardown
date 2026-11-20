@@ -6,6 +6,11 @@ name: ks-teardown
 description: "快手爆款拆解数据源（只读）：关键词搜视频、博主作品与粉丝数据、视频评论，输出 JSON，不登录不发布。触发词：快手、Kuaishou、kwai、快手搜索、快手评论、快手博主。用户要查快手视频、评论、爆款选题、竞品监控、KOL 筛选或评论舆情时使用；抖音、小红书、B站、微博、公众号不要用本技能。"
 license: MIT
 version: 1.1.3
+display_name: "快手爆款拆解｜结构拆解·钩子分析·评论反馈·复刻清单"
+display_name_en: "Kuaishou Viral Teardown"
+description_zh: "快手爆款拆解数据源（只读，无需登录你的快手账号，不发布不点赞不评论，无风控封号问题）：一条命令取到快手公开数据，全部以结构化 JSON 输出，可直接导入 Excel/BI 或交给 AI 拆解。\n\n三类能力：①关键词搜视频，支持综合/最新发布/最多点赞排序、近 1 日/近 7 日/近 1 月时间范围与视频时长筛选，用于爆款选题、高赞对标与热点追踪；②博主作品抓取，可只取互动数据（--limit 0），用于竞品账号监控与对标分析；③视频评论抓取，用于评论区情绪与需求归因、博主真实互动率核查（点赞/评论/收藏）与 KOL 筛选。\n\n典型产出：爆款结构拆解、开头钩子分析、评论反馈归因、可复用复刻清单、对标账号表、选题库、舆情报告。\n\n规模：按量 Token 单次最多 10000 条；包月 Token 搜索最多 30、作品最多 50、评论最多 60，超限返回 PLAN_LIMIT。仅需 Node.js 16.14+ 与 GUAIKEI_API_TOKEN，零第三方依赖，国内直连无需代理。"
+description_en: "Read-only Kuaishou viral teardown data source. No login, no posting or liking, so no ban risk. One command returns public Kuaishou data as structured JSON, ready for Excel, BI or an AI agent.\n\nCapabilities: 1) Keyword search over videos, sorted by relevance, newest or most likes, with 1-day/7-day/30-day windows and duration filters, for topic selection, benchmarking and trend tracking. 2) Creator post scraping, with interactions-only mode (--limit 0), for competitor account monitoring. 3) Video comment scraping for sentiment and demand attribution, plus true engagement-rate checks (likes/comments/collects).\n\nOutputs: viral structure breakdown, hook analysis, comment feedback attribution, replication checklists, benchmark account tables, topic libraries, sentiment reports.\n\nScale: pay-as-you-go up to 10,000 items per call; monthly caps of 30 searches / 50 posts / 60 comment queries, then PLAN_LIMIT. Needs Node.js 16.14+ and GUAIKEI_API_TOKEN; works in mainland China, no proxy."
+author: "新郑市怪奇信息技术工作室"
 metadata:
   openclaw:
     emoji: "📷"
